@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 
-import logoAsset from "@/assets/lcbs/logo.jpg.asset.json";
-import vibercrete1 from "@/assets/lcbs/vibercrete-1.jpg.asset.json";
-import vibercrete2 from "@/assets/lcbs/vibercrete-2.jpg.asset.json";
-import vibercrete3 from "@/assets/lcbs/vibercrete-3.jpg.asset.json";
-import plaster1 from "@/assets/lcbs/plaster-1.jpg.asset.json";
-import blockWall from "@/assets/lcbs/block-wall.jpg.asset.json";
-import roofing from "@/assets/lcbs/roofing.jpg.asset.json";
-import paving from "@/assets/lcbs/paving.jpg.asset.json";
-import team1 from "@/assets/lcbs/team-1.jpg.asset.json";
-import team2 from "@/assets/lcbs/team-2.jpg.asset.json";
+import logoAsset from "@/assets/lcbs/logo.jpg";
+import vibercrete1 from "@/assets/lcbs/vibercrete-1.jpg";
+import vibercrete2 from "@/assets/lcbs/vibercrete-2.jpg";
+import vibercrete3 from "@/assets/lcbs/vibercrete-3.jpg";
+import plaster1 from "@/assets/lcbs/plaster-1.jpg";
+import blockWall from "@/assets/lcbs/block-wall.jpg";
+import roofing from "@/assets/lcbs/roofing.jpg";
+import paving from "@/assets/lcbs/paving.jpg";
+import team1 from "@/assets/lcbs/team-1.jpg";
+import team2 from "@/assets/lcbs/team-2.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
         content:
           "Quality materials. Solid results. Paving, roofing, plastering & vibercrete walls in Cape Town.",
       },
-      { property: "og:image", content: logoAsset.url },
+      { property: "og:image", content: logoAsset },
     ],
   }),
   component: Index,
@@ -95,7 +95,7 @@ function Index() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
           <a href="#top" className="flex items-center gap-3 min-w-0">
             <img
-              src={logoAsset.url}
+              src={logoAsset}
               alt="Last Chance Building Supply"
               width={48}
               height={48}
@@ -157,16 +157,16 @@ function Index() {
           <div className="lg:col-span-5 relative animate-fade-in">
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               <div className="tile aspect-[3/4] animate-blueprint" style={{ animationDelay: "0s" }}>
-                <img src={vibercrete2.url} alt="" loading="eager" />
+                <img src={vibercrete2} alt="" loading="eager" />
               </div>
               <div className="tile aspect-[3/4] mt-8 animate-blueprint" style={{ animationDelay: "-2s" }}>
-                <img src={paving.url} alt="" loading="eager" />
+                <img src={paving} alt="" loading="eager" />
               </div>
               <div className="tile aspect-square animate-blueprint" style={{ animationDelay: "-4s" }}>
-                <img src={roofing.url} alt="" loading="eager" />
+                <img src={roofing} alt="" loading="eager" />
               </div>
               <div className="tile aspect-square mt-8 animate-blueprint" style={{ animationDelay: "-6s" }}>
-                <img src={plaster1.url} alt="" loading="eager" />
+                <img src={plaster1} alt="" loading="eager" />
               </div>
             </div>
           </div>
@@ -209,7 +209,7 @@ function Index() {
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
                 <div className="photo">
-                  <img src={s.img.url} alt="" loading="lazy" />
+                  <img src={s.img} alt="" loading="lazy" />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3">
@@ -248,7 +248,7 @@ function Index() {
                 className={`tile reveal ${i % 5 === 0 ? "row-span-2 aspect-[3/4]" : "aspect-square"}`}
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <img src={g.url} alt="" loading="lazy" />
+                <img src={g} alt="" loading="lazy" />
               </div>
             ))}
           </div>
@@ -262,10 +262,10 @@ function Index() {
           <div className="lg:col-span-5 reveal">
             <div className="grid grid-cols-2 gap-4">
               <div className="tile aspect-[3/4]">
-                <img src={team2.url} alt="" loading="lazy" />
+                <img src={team2} alt="" loading="lazy" />
               </div>
               <div className="tile aspect-[3/4] mt-10">
-                <img src={team1.url} alt="" loading="lazy" />
+                <img src={team1} alt="" loading="lazy" />
               </div>
             </div>
           </div>
@@ -356,7 +356,7 @@ function Index() {
       <footer className="border-t border-border py-10 px-5 bg-ink text-white/70">
         <div className="mx-auto max-w-7xl flex flex-col md:flex-row gap-4 items-center justify-between text-xs uppercase tracking-[0.25em]">
           <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="" width={32} height={32} className="h-8 w-8 rounded-full object-cover" />
+            <img src={logoAsset} alt="" width={32} height={32} className="h-8 w-8 rounded-full object-cover" />
             <span>© {new Date().getFullYear()} Last Chance Building Supply</span>
           </div>
           <span>Building Today. Improving Tomorrow.</span>
